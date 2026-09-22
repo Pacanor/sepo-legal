@@ -106,6 +106,10 @@ const copy = {
       "Names, figures and court files stay in chambers. What follows is the character of the work, not a client list. If your situation resembles any of these, we are prepared to consider it.",
     approach_kicker: "How we are instructed",
     approach_title: "A short conversation before any fee.",
+    approach_intro:
+      "Everyone deserves proper legal representation, whether the matter is large or small. Proper representation also depends on the right fit between client and counsel. Call us, at no charge, and we will see whether we are a good fit for each other.",
+    cta_whatsapp: "WhatsApp us",
+    cta_call: "Call now",
     contact_kicker: "Chambers",
     contact_title: "Set out the matter. We will tell you if we can act.",
     contact_body:
@@ -149,6 +153,10 @@ const copy = {
       "Mayina ndi mafayilo amakhala m’chipinda chathu. Izi zikuwonetsa mtundu wa ntchito, osati mndandanda wa makasitomala.",
     approach_kicker: "Momwe timayambira",
     approach_title: "Kukambirana kwafupifupi musanakalipire.",
+    approach_intro:
+      "Aliyense ayenera kupeza chithandizo cha zamalamulo choyenera, kaya nkhani ndi yaikulu kapena yaing’ono. Chithandizo choyenera chimafunikiranso kugwirizana kwa kasitomala ndi loya. Timbani, kwaulere, tionetse ngati tingagwirizane.",
+    cta_whatsapp: "WhatsApp",
+    cta_call: "Imbani tsopano",
     contact_kicker: "Ofesi",
     contact_title: "Fotokozani nkhaniyanu. Tiwuza ngati titha kugwira.",
     contact_body:
@@ -192,6 +200,10 @@ const copy = {
       "Amasina na mafyailo yaba mu cipinda. Ici cilelanga umutundu wa milimo, te ndalama ya bakasitomala.",
     approach_kicker: "Ifyo twatendeka",
     approach_title: "Ukulanaya kwa kufupi ilyo tetulipila.",
+    approach_intro:
+      "Umuntu onse afwile ukwata ubufundo ubusuma, nangu umulandu ulechepa nangu ukalamba. Ubufundo ubusuma bulaloleka na pa kulingana pakati ka kasitomala na lawyer. Itileni, kwa bulyo, pakumona nga twalingana.",
+    cta_whatsapp: "WhatsApp",
+    cta_call: "Itileni nomba",
     contact_kicker: "Icipinda",
     contact_title: "Landa umulandu. Tukamweba nga twingabomba.",
     contact_body:

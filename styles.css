@@ -187,10 +187,8 @@ a {
 }
 
 .lang-card p {
-  margin: -18px -16px 10px;
-  padding: 10px 16px;
-  color: white;
-  background: var(--gold);
+  margin: 0 0 10px;
+  color: var(--gold);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -328,16 +326,6 @@ a {
   opacity: 0;
 }
 
-.practice-card.is-hovered span {
-  color: white;
-}
-
-.practice-card.to-gold.is-hovered span,
-.practice-card.to-gold.is-hovered li {
-  color: white;
-  background: var(--black);
-}
-
 .kicker {
   display: inline-block;
   margin: 0 0 22px;
@@ -349,9 +337,9 @@ a {
 }
 
 .kicker.dark {
-  padding: 6px 10px;
-  color: white;
-  background: var(--gold);
+  color: var(--gold);
+  background: transparent;
+  padding: 0;
 }
 
 .kicker.light {
@@ -522,7 +510,7 @@ h2 {
 .charter h3 {
   font-size: 1.35rem;
   line-height: 1.35;
-  color: white;
+  color: var(--black);
 }
 
 .practice {
@@ -561,29 +549,27 @@ h2 {
 }
 
 .practice-card.to-gold.is-hovered {
-  color: var(--black);
+  color: white;
   background: var(--gold);
 }
 
 .practice-card span {
-  display: inline-block;
+  display: block;
   margin-bottom: 18px;
-  padding: 5px 9px;
-  color: white;
-  background: var(--gold);
+  color: var(--gold);
   font-size: 0.7rem;
   letter-spacing: 0.16em;
 }
 
-.practice-card.is-hovered span {
-  color: white;
-  opacity: 1;
+.practice-card.to-ink.is-hovered span,
+.practice-card.to-ink.is-hovered li {
+  color: var(--gold);
 }
 
 .practice-card.to-gold.is-hovered span,
 .practice-card.to-gold.is-hovered li {
   color: white;
-  background: var(--black);
+  background: transparent;
 }
 
 .practice-card h3 {
@@ -602,25 +588,26 @@ h2 {
 }
 
 .practice-card.to-gold.is-hovered p {
-  color: rgba(12, 12, 12, 0.78);
+  color: var(--black);
 }
 
 .practice-card ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 8px;
+  gap: 8px 14px;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--gold);
 }
 
 .practice-card li {
-  padding: 5px 9px;
-  color: white;
-  background: var(--gold);
+  padding: 0;
+  color: inherit;
+  background: transparent;
 }
 
 .matters {
@@ -769,7 +756,7 @@ h2 {
 
 .people {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
 
@@ -809,6 +796,11 @@ h2 {
   background: rgba(173, 139, 58, 0.9);
 }
 
+.person-card:hover .person-caption,
+.person-card:focus-within .person-caption {
+  color: white;
+}
+
 .person-caption h3 {
   margin: 0 0 6px;
   font-size: 1.45rem;
@@ -844,25 +836,38 @@ h2 {
   color: var(--black);
 }
 
-.approach h2 {
-  color: white;
-}
-
 .approach h2,
 .approach h3,
-.approach .steps span,
-.approach .steps p {
+.approach .steps span {
   color: white;
 }
 
 .approach .kicker {
-  color: white;
+  color: var(--black);
   background: transparent;
   padding: 0;
 }
 
+.approach-lead {
+  max-width: 520px;
+  margin: 22px 0 28px;
+  color: var(--black);
+  font-size: 1.05rem;
+}
+
+.approach .button-solid {
+  color: white;
+  background: var(--black);
+}
+
+.approach .button-ghost {
+  color: var(--black);
+  border-color: var(--black);
+}
+
 .approach .steps p {
-  opacity: 0.86;
+  color: var(--black);
+  opacity: 1;
 }
 
 .approach .steps li {
@@ -964,9 +969,12 @@ h2 {
   .contact-grid,
   .charter,
   .practice-grid,
-  .people,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .people {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .charter article {
