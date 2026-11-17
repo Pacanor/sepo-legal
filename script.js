@@ -60,18 +60,31 @@ const setCurrentNav = (id) => {
   });
 };
 
-if (sections.length && "IntersectionObserver" in window) {
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible?.target?.id) setCurrentNav(visible.target.id);
-    },
-    { threshold: [0.18, 0.4, 0.6], rootMargin: "-18% 0px -48% 0px" },
-  );
-  sections.forEach((section) => navObserver.observe(section));
-}
+const syncNavFromScroll = () => {
+  if (!sections.length) return;
+  // At the hero / very top, no section should claim the nav.
+  if (window.scrollY < 80) {
+    setCurrentNav(null);
+    return;
+  }
+  const headerOffset = 100;
+  const focusY = window.scrollY + window.innerHeight * 0.28;
+  let active = null;
+  for (const section of sections) {
+    const top = section.offsetTop - headerOffset;
+    const bottom = top + section.offsetHeight;
+    if (focusY >= top && focusY < bottom) {
+      active = section.id;
+      break;
+    }
+  }
+  setCurrentNav(active);
+};
+
+setCurrentNav(null);
+syncNavFromScroll();
+window.addEventListener("scroll", syncNavFromScroll, { passive: true });
+window.addEventListener("hashchange", () => requestAnimationFrame(syncNavFromScroll));
 
 const copy = {
   en: {
