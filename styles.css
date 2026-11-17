@@ -774,6 +774,10 @@ h2 {
   object-position: center 10%;
 }
 
+.person-card {
+  cursor: pointer;
+}
+
 .person-overlay {
   position: absolute;
   inset: auto 0 0;
@@ -789,15 +793,17 @@ h2 {
 }
 
 .person-card:hover .person-overlay,
-.person-card:focus-within .person-overlay {
-  min-height: 50%;
+.person-card:focus-within .person-overlay,
+.person-card.is-expanded .person-overlay {
+  min-height: 58%;
   justify-content: flex-start;
   color: var(--black);
-  background: rgba(173, 139, 58, 0.9);
+  background: rgba(173, 139, 58, 0.92);
 }
 
 .person-card:hover .person-caption,
-.person-card:focus-within .person-caption {
+.person-card:focus-within .person-caption,
+.person-card.is-expanded .person-caption {
   color: white;
 }
 
@@ -825,36 +831,100 @@ h2 {
   transition: max-height 420ms ease, opacity 420ms ease;
 }
 
-.person-contact {
-  display: grid;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
+.person-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  list-style: none;
-  font-size: 0.78rem;
-  line-height: 1.35;
-  transition: max-height 420ms ease, opacity 420ms ease;
+  pointer-events: none;
+  transition: max-height 420ms ease, opacity 420ms ease, margin 420ms ease;
 }
 
-.person-contact a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.person-links a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  color: var(--black);
+  border: 1px solid rgba(12, 12, 12, 0.28);
+  border-radius: 999px;
+  background: transparent;
+  transition: background 280ms ease, color 280ms ease, border-color 280ms ease;
+}
+
+.person-links a:hover,
+.person-links a:focus-visible {
+  color: var(--gold);
+  background: var(--black);
+  border-color: var(--black);
 }
 
 .person-card:hover .person-bio,
-.person-card:focus-within .person-bio {
-  max-height: 180px;
+.person-card:focus-within .person-bio,
+.person-card.is-expanded .person-bio {
+  max-height: 220px;
   opacity: 1;
 }
 
-.person-card:hover .person-contact,
-.person-card:focus-within .person-contact {
-  max-height: 72px;
+.person-card:hover .person-links,
+.person-card:focus-within .person-links,
+.person-card.is-expanded .person-links {
+  max-height: 52px;
+  margin-top: 4px;
   opacity: 1;
+  pointer-events: auto;
+}
+
+@media (hover: none) {
+  .person-card:hover .person-overlay {
+    min-height: 92px;
+    justify-content: flex-end;
+    color: white;
+    background: linear-gradient(180deg, transparent, rgba(20, 16, 8, 0.78));
+  }
+
+  .person-card:hover .person-caption {
+    color: white;
+  }
+
+  .person-card:hover .person-bio,
+  .person-card:hover .person-links {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .person-card.is-expanded .person-overlay,
+  .person-card.is-expanded:hover .person-overlay {
+    min-height: 58%;
+    justify-content: flex-start;
+    color: var(--black);
+    background: rgba(173, 139, 58, 0.92);
+  }
+
+  .person-card.is-expanded .person-caption,
+  .person-card.is-expanded:hover .person-caption {
+    color: white;
+  }
+
+  .person-card.is-expanded .person-bio,
+  .person-card.is-expanded:hover .person-bio {
+    max-height: 220px;
+    opacity: 1;
+  }
+
+  .person-card.is-expanded .person-links,
+  .person-card.is-expanded:hover .person-links {
+    max-height: 52px;
+    margin-top: 4px;
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .approach {

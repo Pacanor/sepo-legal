@@ -418,3 +418,52 @@ if (focusGrid && focusCards.length) {
 document.querySelectorAll(".hero-slide img, .stories-media img").forEach((img) => {
   img.setAttribute("alt", "");
 });
+
+(() => {
+  const personCards = [...document.querySelectorAll(".person-card")];
+  if (!personCards.length) return;
+
+  const tapMedia = window.matchMedia("(hover: none)");
+  let tapUi = tapMedia.matches;
+
+  const collapseAll = () => {
+    personCards.forEach((card) => card.classList.remove("is-expanded"));
+  };
+
+  const syncTabIndex = () => {
+    personCards.forEach((card) => {
+      const open = !tapUi || card.classList.contains("is-expanded");
+      card.querySelectorAll(".person-links a").forEach((link) => {
+        link.tabIndex = open ? 0 : -1;
+      });
+    });
+  };
+
+  tapMedia.addEventListener("change", () => {
+    tapUi = tapMedia.matches;
+    if (!tapUi) collapseAll();
+    syncTabIndex();
+  });
+
+  personCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (!tapUi) return;
+      if (event.target.closest(".person-links a")) return;
+      const willExpand = !card.classList.contains("is-expanded");
+      collapseAll();
+      if (willExpand) card.classList.add("is-expanded");
+      syncTabIndex();
+    });
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (!tapUi) return;
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (personCards.some((card) => card.contains(target))) return;
+    collapseAll();
+    syncTabIndex();
+  });
+
+  syncTabIndex();
+})();
