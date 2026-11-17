@@ -825,9 +825,35 @@ h2 {
   transition: max-height 420ms ease, opacity 420ms ease;
 }
 
+.person-contact {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  list-style: none;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  transition: max-height 420ms ease, opacity 420ms ease;
+}
+
+.person-contact a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .person-card:hover .person-bio,
 .person-card:focus-within .person-bio {
-  max-height: 220px;
+  max-height: 180px;
+  opacity: 1;
+}
+
+.person-card:hover .person-contact,
+.person-card:focus-within .person-contact {
+  max-height: 72px;
   opacity: 1;
 }
 
