@@ -18,11 +18,16 @@ menuButton?.addEventListener("click", () => {
 
 nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
-window.addEventListener(
-  "scroll",
-  () => header?.classList.toggle("scrolled", window.scrollY > 16),
-  { passive: true },
-);
+const syncHeader = () => {
+  header?.classList.toggle("scrolled", window.scrollY > 50);
+};
+syncHeader();
+window.addEventListener("scroll", syncHeader, { passive: true });
+window.addEventListener("hashchange", () => {
+  // Anchor jumps may not fire a scroll event until after layout.
+  requestAnimationFrame(syncHeader);
+});
+window.addEventListener("pageshow", syncHeader);
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
