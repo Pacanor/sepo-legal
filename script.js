@@ -190,7 +190,7 @@ const copy = {
     bio_samarantha:
       "Advocate of the High Court for Zambia. LLB and Master of Arts in Development Studies (Cavendish University). More than five years in corporate advisory, legal compliance, contract management, labour advisory and litigation support.",
     bio_gilbert:
-      "Advocate of the High Court for Zambia, with audience in all Superior Courts. LLB; LLM in Environmental Law; presently pursuing a postgraduate diploma in Risk Management. More than twenty years in government and private practice across criminal law, civil litigation, corporate governance and regulatory compliance. Complex contracts, high-profile litigation and compliance work.",
+      "Advocate of the High Court for Zambia. LLB; LLM in Environmental Law; presently pursuing a postgraduate diploma in Risk Management. More than twenty years in government and private practice across criminal law, civil litigation, corporate governance and compliance.",
     bio_maxwell:
       "Advocate of the High Court for Zambia. Public health specialist and trade unionist; formerly President of EPHUZ and presently Vice President of UHAWUZ. LLB (ZAOU); Diploma in Environmental Health Sciences (Evelyn Hone College).",
     footer_rights: "Sepo Legal Practitioners. All rights reserved.",
@@ -302,7 +302,7 @@ const copy = {
     bio_samarantha:
       "Advocate wa High Court ya Zambia. LLB ndi Master of Arts ya Development Studies (Cavendish University). Zaka zoposa zisanu mu upangiri wa makampani, kugwirizana ndi malamulo, kayendedwe ka makontrakiti, labour ndi thandizo la milandu.",
     bio_gilbert:
-      "Advocate wa High Court ya Zambia, ndi ufulu wa kuyimba m’makhoti onse apamwamba. LLB; LLM ya Environmental Law; pakali pano akupanga postgraduate diploma ya Risk Management. Zaka zoposa makumi awiri mu boma ndi ntchito yachinsinsi, kuphatikizapo criminal law, civil litigation, corporate governance ndi regulatory compliance. Makontrakiti ovuta, milandu yaikulu ndi ntchito ya compliance.",
+      "Advocate wa High Court ya Zambia. LLB; LLM ya Environmental Law; pakali pano akupanga postgraduate diploma ya Risk Management. Zaka zoposa makumi awiri mu boma ndi ntchito yachinsinsi pa criminal law, civil litigation, corporate governance ndi compliance.",
     bio_maxwell:
       "Advocate wa High Court ya Zambia. Katswiri wa umoyo wa anthu ndi trade unionist; kale Purezidenti wa EPHUZ ndipo panopa Wachiwiri kwa Purezidenti wa UHAWUZ. LLB (ZAOU); Diploma ya Environmental Health Sciences (Evelyn Hone College).",
     footer_rights: "Sepo Legal Practitioners. Ufulu wonse wasungidwa.",
@@ -414,7 +414,7 @@ const copy = {
     bio_samarantha:
       "Advocate wa High Court ya Zambia. LLB ne Master of Arts ya Development Studies (Cavendish University). Imyaka iingi iya konsa mu ubufundo bwa amakampani, ukukonka ifunde, ukutungulula amakontrakiti, labour no kwafwilisha imilandu.",
     bio_gilbert:
-      "Advocate wa High Court ya Zambia, ne nsambu shakwimba mu makoti yonse ayakalamba. LLB; LLM ya Environmental Law; nomba alebomba postgraduate diploma ya Risk Management. Imyaka iingi iya makumi yabili mu govamente ne milimo ya cinecine, ukupatulapo criminal law, civil litigation, corporate governance ne regulatory compliance. Amakontrakiti ayakalamba, imilandu ikalamba ne milimo ya compliance.",
+      "Advocate wa High Court ya Zambia. LLB; LLM ya Environmental Law; nomba alebomba postgraduate diploma ya Risk Management. Imyaka iingi iya makumi yabili mu govamente ne milimo ya cinecine pa criminal law, civil litigation, corporate governance ne compliance.",
     bio_maxwell:
       "Advocate wa High Court ya Zambia. Ubukankala bwa umoyo wa bantu ne trade unionist; kale Purezidenti wa EPHUZ kabili nomba Wachibili ku Purezidenti wa UHAWUZ. LLB (ZAOU); Diploma ya Environmental Health Sciences (Evelyn Hone College).",
     footer_rights: "Sepo Legal Practitioners. Nsambu shonse shasungwa.",
